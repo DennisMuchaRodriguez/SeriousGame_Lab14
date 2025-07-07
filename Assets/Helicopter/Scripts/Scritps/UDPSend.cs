@@ -121,9 +121,9 @@ public class UDPSend : MonoBehaviour
         // Motor A (atrás): disminuye con pitch positivo
         // Motor B (izquierdo): aumenta con pitch positivo y roll positivo
         // Motor C (derecho): aumenta con pitch positivo pero disminuye con roll positivo
-        A = valueMotor - deltaPitch;
-        B = valueMotor + deltaPitch + deltaRoll;
-        C = valueMotor + deltaPitch - deltaRoll;
+        A = valueMotor + deltaPitch;
+        B = valueMotor - deltaPitch + deltaRoll;
+        C = valueMotor - deltaPitch - deltaRoll;
 
         // Aplicar límites físicos [0, 200]
         A = Mathf.Clamp(A, 0f, 200f);
